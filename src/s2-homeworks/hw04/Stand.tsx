@@ -5,6 +5,7 @@ import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 import SuperButton from './common/c2-SuperButton/SuperButton'
 
 const Stand = () => {
+    // text to fix deployment
     const [stateForAllInputs, setValue] = useState<string>('')
     const [error, setError] = useState<string>('')
 
