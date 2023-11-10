@@ -11,6 +11,17 @@ export const PATH = {
     JUNIOR_PLUS: '/junior-plus',
 }
 
+// <Routes>
+//     <Route path={'/'} element={<Navigate to={'/page/0'}/>}/>
+//
+//     {/*<Route path={'/page1'} element={<PageOne/>}/>*/}
+//     <Route path={'/page/:id'} element={<Page pages={dataState.pages}/>}/>
+//
+//     {/*<Route path={'/*'} element={<Error404/>}/>*/}
+//     <Route path={'/page/error'} element={<Error404 />} />
+//     <Route path={'/*'} element={<Navigate to={'/page/error'} />}/>
+// </Routes>
+
 function Pages() {
     return (
         <div>
@@ -18,15 +29,15 @@ function Pages() {
             <Routes>
                 {/*роутинг будут писать студенты*/}
                 {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior*/}
-                {/*<Route ...*/}
 
+                <Route path={'/'} element={<Navigate to={'/pre-junior*/'}/>}/>
                 {/*роуты для /pre-junior, /junior, /junior-plus*/}
-                {/*<Route ...*/}
-                {/*<Route ...*/}
-                {/*<Route ...*/}
+                <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
+                <Route path={PATH.JUNIOR} element={<Junior/>}/>
+                <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus/>}/>
 
                 {/*роут для несуществующей страницы должен отрисовать <Error404 />*/}
-                {/*<Route ...*/}
+                <Route path={'/*'} element={<Error404 />}/>
             </Routes>
         </div>
     )
