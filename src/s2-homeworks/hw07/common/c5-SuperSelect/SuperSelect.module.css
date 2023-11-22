@@ -1,9 +1,17 @@
 .select {
+    width: 165px;
+    height: 24px;
+    padding: 2px;
+    background-color: transparent;
 }
 
 .select:focus {
 }
 
+.option{
+
+}
 
 .option:hover {
+
 }
