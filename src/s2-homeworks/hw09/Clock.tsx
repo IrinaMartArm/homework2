@@ -34,17 +34,19 @@ function Clock() {
     const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
+    const addZero = (number: number) => number < 10 ? '0' + number : number
+
     const stringTime =
         <div>
-            <span>{date.getHours()}:</span>
-            <span>{date.getMinutes()}:</span>
-            <span>{date.getSeconds()}</span>
+            <span>{addZero(date.getHours())}:</span>
+            <span>{addZero(date.getMinutes())}:</span>
+            <span>{addZero(date.getSeconds())}</span>
         </div> || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
 
     const stringDate =
         <div>
-            <span>{date.getDay()}:</span>
-            <span>{date.getMonth()}:</span>
+            <span>{addZero(date.getDay())}:</span>
+            <span>{addZero(date.getMonth())}:</span>
             <span>{date.getFullYear()}</span>
         </div> || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
