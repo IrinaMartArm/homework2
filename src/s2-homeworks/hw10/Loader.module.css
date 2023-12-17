@@ -1,3 +1,6 @@
 .loader {
     /*свг и/или анимация*/
+    width: 100px;
+    height: 10px;
+    background-color: #cc9c00;
 }
