@@ -1,5 +1,5 @@
 const initState = {
-    themeId: 2,
+    themeId: 1,
 }
 
 export type StateType = typeof initState
