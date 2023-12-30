@@ -1,22 +1,50 @@
 .buttonsContainer {
+    display: flex;
+    gap: 15px;
+    margin: 20px auto 0;
 }
 
 .responseContainer {
+    display: flex;
+    margin: 0 auto;
+    gap: 100px;
+    align-items: center;
 }
 
 .imageContainer {
+
 }
 
 .image {
+
 }
 
 .textContainer{
+    /*border: 1px solid red;*/
+    display: grid;
+    gap: 30px;
 }
 
 .code {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .text {
+    width: 350px;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 .info {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
