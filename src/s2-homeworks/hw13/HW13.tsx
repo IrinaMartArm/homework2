@@ -34,14 +34,16 @@ const HW13 = () => {
         axios
             .post(url, {success: x})
             .then((res) => {
-                setCode('Код 200!')
-                setImage(success200)
-                setText('...всё ок)')
-                setInfo('код 200 - обычно означает что скорее всего всё ок)')
-                // дописать
-
+                if(x === true) {
+                    setCode('Код 200!')
+                    setImage(success200)
+                    setText('...всё ок)')
+                    setInfo('код 200 - обычно означает что скорее всего всё ок)')
+                    // дописать
+                }
             })
             .catch((e) => {
+
                 if(x === false){
                     setCode('Код 400!')
                     setImage(error400)
@@ -49,12 +51,12 @@ const HW13 = () => {
                     setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
                 } else if(x === undefined) {
                     setCode('Ошибка 500!')
-                    setImage(error400)
+                    setImage(error500)
                     setText('имитация ошибки на сервере')
                     setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
                 } else {
                     setCode('Error!')
-                    setImage(error400)
+                    setImage(errorUnknown)
                     setText('Network Error')
                     setInfo('AxiosError')
                 }
