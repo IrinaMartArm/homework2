@@ -34,6 +34,7 @@ const HW13 = () => {
         axios
             .post(url, {success: x})
             .then((res) => {
+                console.log(res)
                 if(x === true) {
                     setCode('Код 200!')
                     setImage(success200)
@@ -44,12 +45,12 @@ const HW13 = () => {
             })
             .catch((e) => {
 
-                if(x === false){
+                if(x === undefined){
                     setCode('Код 400!')
                     setImage(error400)
                     setText('Ты не отправил success в body вообще!')
                     setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
-                } else if(x === undefined) {
+                } else if(x === false) {
                     setCode('Ошибка 500!')
                     setImage(error500)
                     setText('имитация ошибки на сервере')
