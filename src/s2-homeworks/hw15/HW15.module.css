@@ -1,5 +1,6 @@
 .tech {
     width: 50vw;
+
 }
 
 .developer {
@@ -8,6 +9,8 @@
 
 .techHeader {
     width: 50vw;
+    margin-left: 20px;
+
 }
 
 .developerHeader {
@@ -16,10 +19,12 @@
 
 .row {
     display: flex;
+    margin-left: 20px;
 }
 
 .rowHeader {
     display: flex;
+
 }
 
 .loading {
