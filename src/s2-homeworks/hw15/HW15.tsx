@@ -59,14 +59,13 @@ const HW15 = () => {
 	}
 
 	const onChangePagination = (newPage: number, newCount: number) => {
-		console.log(newCount)
 		setPage(newPage)
 		setCount(newCount)
 		const pageN: {page?: string} = newPage !==1 ? {page: newPage + ''} : {}
-		const countN: {count?: string} = newCount !==4? {count: newCount+ ''} : {}
+		const countN: {count?: string} = newCount !==4 ? {count: newCount+ ''} : {}
 		const {page, count, ...rest} = Object.fromEntries(searchParams)
 
-		sendQuery({...rest, pageN, countN})
+		sendQuery({...rest, ...pageN, ...countN})
 		setSearchParams({...rest, ...pageN,...countN })
 	}
 

@@ -42,7 +42,7 @@ const SuperSort: React.FC<SuperSortPropsType> = (
             ? upIcon
             : noneIcon
 
-    console.log('sort')
+
     return (
         <span
             id={id + '-sort-' + value}
