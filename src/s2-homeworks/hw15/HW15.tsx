@@ -75,9 +75,8 @@ const HW15 = () => {
 		setPage(1) // при сортировке сбрасывать на 1 страницу
 		const sortQ: any = newSort !== '' ? {sort: newSort} : {}
 		const {sort, ...rest} = Object.fromEntries(searchParams)
-		const allQ = {...rest, ...sortQ}
-		sendQuery(allQ)
-		setSearchParams(allQ)
+		sendQuery({...rest, ...sortQ})
+		setSearchParams({...rest, ...sortQ})
 	}
 
 	useEffect(() => {
